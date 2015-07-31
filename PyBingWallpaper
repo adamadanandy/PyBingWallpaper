@@ -6,8 +6,17 @@ from xml.dom import minidom
 from PIL import Image
 import os
 
+
+#Variables:
 saveDir = 'C:\BingWallPaper\\'
-usock = urlopen('http://www.bing.com/HPImageArchive.aspx?format=xml&idx=0&n=1&mkt=zh-CN')
+i = 0
+while i<1:
+    try:
+        usock = urlopen('http://www.bing.com/HPImageArchive.aspx?format=xml&idx=0&n=1&mkt=zh-CN')
+    except:
+        i = 0
+    else:
+        i = 1
 xmldoc = minidom.parse(usock)
 num = 1
 #Parsing the XML File
