@@ -1,7 +1,7 @@
 #! /usr/bin/python3
 
 import win32gui
-from urllib import urlopen, urlretrieve
+from urllib.request import urlopen, urlretrieve
 from xml.dom import minidom
 from PIL import Image
 import os
